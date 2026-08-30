@@ -1,0 +1,14 @@
+# Core dependencies -- the whole project (dgp.py's synthetic fallback,
+# learners.py, metrics.py, run_experiment.py, test_sanity.py) runs with
+# only these three installed.
+numpy>=1.24
+scikit-learn>=1.2
+matplotlib>=3.7
+
+# Optional -- only needed for the real-data demo in run_experiment.py
+# (Part 0), which best-effort-fetches the Hillstrom MineThatData email RCT.
+# If either package is missing, or the download fails (e.g. no network
+# access), the code catches this and falls back to the synthetic DGP with
+# a clear message -- nothing else in the project requires them.
+# scikit-uplift>=0.5
+# pandas>=1.5
